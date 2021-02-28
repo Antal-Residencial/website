@@ -1,0 +1,292 @@
+{
+  "Main": {
+    "titulo": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Título"
+      }
+    },
+    "hero_image": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          }
+        },
+        "label": "Hero Image",
+        "repeat": false
+      }
+    },
+    "concepto": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1",
+              "label": "Title"
+            }
+          },
+          "content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "label": "Content"
+            }
+          }
+        },
+        "label": "Concepto",
+        "repeat": false
+      }
+    },
+    "gallery": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          }
+        },
+        "label": "Gallery"
+      }
+    },
+    "virtual_tour": {
+      "type": "Embed",
+      "config": {
+        "label": "Virtual tour"
+      }
+    },
+    "master_plan": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1",
+              "label": "Title"
+            }
+          },
+          "content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "label": "Content"
+            }
+          }
+        },
+        "label": "Master plan",
+        "repeat": false
+      }
+    },
+    "amenidades": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1",
+              "label": "Title"
+            }
+          },
+          "amenidades1": {
+            "type": "StructuredText",
+            "config": {
+              "single": "paragraph",
+              "label": "Amenidades",
+              "placeholder": "Separa por comas las amenidades"
+            }
+          }
+        },
+        "label": "Amenidades",
+        "repeat": false
+      }
+    },
+    "banner": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Content"
+            }
+          },
+          "button_text": {
+            "type": "StructuredText",
+            "config": {
+              "single": "paragraph",
+              "label": "Button text"
+            }
+          }
+        },
+        "label": "Banner",
+        "repeat": false
+      }
+    },
+    "full_width_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Full width image"
+      }
+    },
+    "houses": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1",
+              "label": "Title"
+            }
+          },
+          "content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "label": "Content"
+            }
+          },
+          "show_button": {
+            "type": "Boolean",
+            "config": {
+              "default_value": false,
+              "label": "Show button"
+            }
+          }
+        },
+        "label": "Houses"
+      }
+    },
+    "text_banner": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "label": "Content"
+            }
+          }
+        },
+        "label": "Text banner",
+        "repeat": false
+      }
+    },
+    "map": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Map"
+      }
+    },
+    "progress_slider": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1",
+              "label": "Title"
+            }
+          }
+        },
+        "label": "Progress slider"
+      }
+    },
+    "form": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "success_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Success image"
+            }
+          }
+        },
+        "label": "Form",
+        "repeat": false
+      }
+    }
+  }
+}
