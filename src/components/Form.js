@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -25,6 +25,7 @@ const Wrapper = styled.div`
     width: 75%;
     height: auto;
     max-height: 100vh;
+    min-height: auto;
   }
   @media (min-width: 992px) {
     width: 55%;
@@ -66,6 +67,20 @@ const Form = ({ opened, setOpenedForm }) => {
   const [submitted, setSubmitted] = useState(false);
   const [formMsg, setFormMsg] = useState(null);
   const [submitting, setSubmitting] = useState(false);
+  const wrapperRef = useRef(null);
+
+  const handleClickOutside = (e) => {
+    if (wrapperRef && !wrapperRef.current.contains(e.target)) {
+      setOpenedForm(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  });
 
   const { prismicInicio } = useStaticQuery(graphql`
     {
@@ -106,7 +121,11 @@ const Form = ({ opened, setOpenedForm }) => {
   };
 
   return (
-    <Wrapper className={opened ? "opened" : ""} submitted={submitted}>
+    <Wrapper
+      className={opened ? "opened" : ""}
+      submitted={submitted}
+      ref={wrapperRef}
+    >
       <Img
         className="d-none d-md-block"
         fluid={

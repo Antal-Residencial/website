@@ -76,7 +76,7 @@ const Whatsapp = styled.a`
   right: 15px;
   z-index: 1999;
   svg {
-    width: 40px;
+    width: 50px;
     height: auto;
     @media (min-width: 768px) {
       width: 60px;
