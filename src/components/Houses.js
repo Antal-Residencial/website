@@ -88,7 +88,11 @@ const Houses = ({ setOpenedForm }) => {
           </Col>
           <Col md={6} className="overflow-hidden">
             <Row>
-              <Col md={8} lg={6} className="px-5 px-md-0 mx-auto">
+              <Col
+                md={8}
+                lg={6}
+                className="px-5 px-md-0 mx-auto text-center text-md-left"
+              >
                 <h2 className="mb-4 text-center text-md-left">
                   {house.title.text}
                 </h2>

@@ -97,7 +97,7 @@ const MapSection = () => {
               Ver en google maps
               <Arrow />
             </a>
-            <ul>
+            <ul className="d-inline-block d-md-block">
               <li>Hospitales</li>
               <li>Escuelas</li>
               <li>Comercios</li>
