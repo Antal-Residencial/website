@@ -9,7 +9,6 @@ import Button from "./Button";
 
 const Wrapper = styled.div`
   position: fixed;
-  bottom: 0;
   left: 0;
   width: 100%;
   background-color: ${(props) =>
@@ -21,11 +20,14 @@ const Wrapper = styled.div`
   height: 100vh;
   overflow-y: scroll;
   min-height: -webkit-fill-available;
+  top: 0;
   @media (min-width: 768px) {
     width: 75%;
     height: auto;
     max-height: 100vh;
     min-height: auto;
+    bottom: 0;
+    top: auto;
   }
   @media (min-width: 992px) {
     width: 55%;
