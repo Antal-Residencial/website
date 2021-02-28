@@ -22,21 +22,27 @@ const StyledContainer = styled(Container)`
     padding: 0;
     margin: 0;
     list-style: none;
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
     li {
       position: relative;
-      padding-left: 15px;
       letter-spacing: 0.1em;
-      &:before {
-        content: "";
-        display: block;
-        width: 8px;
-        height: 1px;
-        background-color: #000;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        position: absolute;
+      @media (min-width: 768px) {
+        padding-left: 15px;
+        &:before {
+          content: "";
+          display: block;
+          width: 8px;
+          height: 1px;
+          background-color: #000;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          position: absolute;
+        }
       }
     }
   }
@@ -83,7 +89,9 @@ const Houses = ({ setOpenedForm }) => {
           <Col md={6} className="overflow-hidden">
             <Row>
               <Col md={8} lg={6} className="px-5 px-md-0 mx-auto">
-                <h2 className="mb-4">{house.title.text}</h2>
+                <h2 className="mb-4 text-center text-md-left">
+                  {house.title.text}
+                </h2>
                 <RichText render={house.content.raw} />
                 {house.show_button && (
                   <Button

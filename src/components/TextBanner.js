@@ -48,7 +48,7 @@ const TextBanner = () => {
           className="d-flex align-items-center justify-content-center px-5 px-md-0 py-4 py-md-0"
         >
           <div>
-            <div className="d-inline">
+            <div className="d-inline text-center text-md-left">
               <RichText
                 render={prismicInicio.data.text_banner[0].content.raw}
               />

@@ -63,7 +63,7 @@ const Banner = ({ setOpenedForm }) => {
         >
           <Row>
             <Col md={8} lg={7} className="mx-auto">
-              <p className="mb-5">
+              <p className="mb-5 px-5 px-md-0">
                 {prismicInicio.data.banner[0].content.text}
               </p>
               <Button

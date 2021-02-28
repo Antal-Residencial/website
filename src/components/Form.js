@@ -37,6 +37,7 @@ const Wrapper = styled.div`
     border: none;
     border-bottom: solid 1px #fff;
     color: rgba(255, 255, 255, 0.7);
+    border-radius: 0;
     ::placeholder {
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.7);

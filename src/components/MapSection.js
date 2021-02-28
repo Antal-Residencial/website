@@ -77,7 +77,7 @@ const MapSection = () => {
     <Container className="pt-5" id="ubicacion">
       <Row className="align-items-center">
         <Col md={5} className="mb-5 mb-md-0">
-          <Content className="pr-4">
+          <Content className="pr-md-4 text-center text-md-left">
             <p>
               Entretenimiento, comercio, escuelas y centros de salud a menos de
               5 minutos.
@@ -92,7 +92,7 @@ const MapSection = () => {
               href="https://www.google.com/maps/place/Privada+Residencial+Antal/@20.1200534,-98.7804298,17z/data=!3m1!4b1!4m5!3m4!1s0x85d10a7102d59253:0xda4b03c5b758279e!8m2!3d20.1200534!4d-98.7782411"
               target="_blank"
               rel="noreferrer"
-              className="d-flex align-items-center"
+              className="d-flex align-items-center justify-content-center justify-content-md-start"
             >
               Ver en google maps
               <Arrow />
@@ -100,7 +100,7 @@ const MapSection = () => {
             <ul>
               <li>Hospitales</li>
               <li>Escuelas</li>
-              <li>Comercios y Entretenimiento</li>
+              <li>Comercios</li>
             </ul>
           </Content>
         </Col>

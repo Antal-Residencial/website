@@ -44,10 +44,10 @@ const Footer = ({ setOpenedForm }) => {
   return (
     <Wrapper className="pt-5">
       <Container className="pt-5">
-        <div className="text-md-center mb-5">
+        <div className="text-center mb-5">
           <Logo />
         </div>
-        <Row className="pb-5">
+        <Row className="pb-5 text-center text-md-left">
           <Col className="mb-5 mb-lg-0">
             <h4 className="mb-4">Más información</h4>
             <Button
@@ -60,7 +60,7 @@ const Footer = ({ setOpenedForm }) => {
           </Col>
           <Col md={5} className="text-md-center mb-5 mb-lg-0">
             <h4 className="mb-4">Síguenos</h4>
-            <SocialItems />
+            <SocialItems className="justify-content-center justify-content-md-start" />
           </Col>
           <Col>
             <h4 className="mb-4">Ponte en contacto</h4>

@@ -19,21 +19,27 @@ const StyledContainer = styled(Container)`
   ul {
     padding: 0;
     list-style: none;
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
     li {
-      padding-left: 15px;
       position: relative;
       letter-spacing: 0.1em;
-      &:before {
-        content: "";
-        display: block;
-        width: 8px;
-        height: 1px;
-        background-color: #000;
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
+      @media (min-width: 768px) {
+        padding-left: 15px;
+        &:before {
+          content: "";
+          display: block;
+          width: 8px;
+          height: 1px;
+          background-color: #000;
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
       }
     }
   }
@@ -70,7 +76,7 @@ const MasterPlan = () => {
             <Img fluid={prismicInicio.data.master_plan[0].image.fluid} />
           </Col>
           <Col md={5} className="order-0 order-md-1">
-            <h2 className="mb-5">
+            <h2 className="mb-5 text-center text-md-left">
               {prismicInicio.data.master_plan[0].title.text}
             </h2>
             <RichText render={prismicInicio.data.master_plan[0].content.raw} />
