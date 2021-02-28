@@ -7,7 +7,6 @@ import styled from "styled-components";
 import Arrow from "../images/arrow-2.inline.svg";
 
 const Content = styled.div`
-  font-size: 1.2rem;
   p {
     &:first-of-type {
       margin-bottom: 80px;
