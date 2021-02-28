@@ -20,6 +20,7 @@ const Wrapper = styled.div`
   z-index: 1500;
   height: 100vh;
   overflow-y: scroll;
+  min-height: -webkit-fill-available;
   @media (min-width: 768px) {
     width: 75%;
     height: auto;
