@@ -76,7 +76,7 @@ const MapSection = () => {
   return (
     <Container className="pt-5" id="ubicacion">
       <Row className="align-items-center">
-        <Col md={5}>
+        <Col md={5} className="mb-5 mb-md-0">
           <Content className="pr-4">
             <p>
               Entretenimiento, comercio, escuelas y centros de salud a menos de

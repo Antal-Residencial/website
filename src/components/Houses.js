@@ -8,7 +8,9 @@ import { RichText } from "prismic-reactjs";
 import Button from "./Button";
 
 const StyledContainer = styled(Container)`
-  margin-top: -50px;
+  @media (min-width: 768px) {
+    margin-top: -50px;
+  }
   h2 {
     color: ${(props) => props.theme.colors.gray};
     letter-spacing: 0.1em;
@@ -61,19 +63,19 @@ const Houses = ({ setOpenedForm }) => {
     }
   `);
   return (
-    <StyledContainer fluid className="px-0" id="distribucion">
+    <StyledContainer fluid className="px-0 pt-5 pt-md-0" id="distribucion">
       {prismicInicio.data.houses.map((house) => (
         <Row
           key={house.title.text}
           noGutters
-          className="mb-4 align-items-center"
+          className="mb-5 mb-md-4 align-items-center"
         >
-          <Col md={6}>
+          <Col md={6} className="mb-4 mb-md-0">
             <Img fluid={house.image.fluid} />
           </Col>
           <Col md={6} className="overflow-hidden">
             <Row>
-              <Col md={8} lg={6} className="mx-auto">
+              <Col md={8} lg={6} className="px-5 px-md-0 mx-auto">
                 <h2 className="mb-4">{house.title.text}</h2>
                 <RichText render={house.content.raw} />
                 {house.show_button && (

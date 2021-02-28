@@ -13,9 +13,12 @@ const Wrapper = styled.div`
   & > div {
     z-index: 2;
     p {
-      font-size: 2rem;
+      font-size: 1.5rem;
       letter-spacing: 0.1em;
       line-height: 1;
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
     }
   }
 `;
@@ -37,7 +40,6 @@ const HeroImage = ({ setOpenedForm }) => {
     }
   `);
 
-  console.log(prismicInicio.data.hero_image[0].image.fluid);
   return (
     <Wrapper className="d-flex align-items-center">
       <Img

@@ -76,8 +76,11 @@ const Whatsapp = styled.a`
   right: 15px;
   z-index: 1999;
   svg {
-    width: 60px;
+    width: 40px;
     height: auto;
+    @media (min-width: 768px) {
+      width: 60px;
+    }
   }
 `;
 

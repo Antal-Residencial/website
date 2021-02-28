@@ -57,7 +57,7 @@ const Amenities = () => {
         </Row>
       </StyledContainer>
       <Container fluid>
-        <div className="px-5">
+        <div className="px-md-5">
           <Img fluid={prismicInicio.data.amenidades[0].image.fluid} />
         </div>
       </Container>

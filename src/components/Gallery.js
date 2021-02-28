@@ -10,14 +10,18 @@ import Arrow from "../images/arrow.inline.svg";
 const StyledArrow = styled.button`
   background-color: ${(props) => props.theme.colors.blue};
   border-radius: 100%;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border: none;
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto;
+  @media (min-width: 768px) {
+    width: 80px;
+    height: 80px;
+  }
   svg {
     width: 70%;
     height: auto;
@@ -80,11 +84,19 @@ const Gallery = () => {
     prevArrow: <PrevArrow />,
     nextArrow: <CustomArrow />,
     infinite: prismicInicio.data.gallery.length > 3 ? true : false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
     prismicInicio.data.gallery.length > 0 && (
-      <StyledContainer fluid className="pt-5 mt-5">
+      <StyledContainer fluid className="pt-5 mt-5 overflow-hidden">
         <Slider {...settings}>
           {prismicInicio.data.gallery.map((image) => (
             <Slide key={image.image.url}>

@@ -130,10 +130,10 @@ const Header = ({ setOpenedForm }) => {
         <StyledHeader className="py-4">
           <Container>
             <Row className="align-items-center">
-              <Col>
+              <Col xs={6} md={2}>
                 <Logo />
               </Col>
-              <Col md={8}>
+              <Col md={8} className="d-none d-md-block">
                 <div className="d-flex justify-content-around px-4">
                   <button
                     onClick={() => {
@@ -145,7 +145,7 @@ const Header = ({ setOpenedForm }) => {
                   <a href="tel:+524424541630">TEL 442 454 1630</a>
                 </div>
               </Col>
-              <Col className="text-right">
+              <Col xs={6} md={2} className="text-right">
                 <Hamburger
                   className="m-0"
                   onClick={() => {

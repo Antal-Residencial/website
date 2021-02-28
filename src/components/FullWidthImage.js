@@ -22,7 +22,12 @@ const FullWidthImage = () => {
     }
   `);
 
-  return <StyledImg fluid={prismicInicio.data.full_width_image.fluid} />;
+  return (
+    <StyledImg
+      fluid={prismicInicio.data.full_width_image.fluid}
+      className="d-none d-md-block"
+    />
+  );
 };
 
 export default FullWidthImage;

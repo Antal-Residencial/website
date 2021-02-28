@@ -44,11 +44,11 @@ const Footer = ({ setOpenedForm }) => {
   return (
     <Wrapper className="pt-5">
       <Container className="pt-5">
-        <div className="text-center mb-5">
+        <div className="text-md-center mb-5">
           <Logo />
         </div>
         <Row className="pb-5">
-          <Col>
+          <Col className="mb-5 mb-md-0">
             <h4 className="mb-4">Más información</h4>
             <Button
               onClick={() => {
@@ -58,7 +58,7 @@ const Footer = ({ setOpenedForm }) => {
               Descargar brochure
             </Button>
           </Col>
-          <Col md={5} className="text-center">
+          <Col md={5} className="text-md-center mb-5 mb-md-0">
             <h4 className="mb-4">Síguenos</h4>
             <SocialItems />
           </Col>
@@ -74,8 +74,9 @@ const Footer = ({ setOpenedForm }) => {
       <span className="divider"></span>
       <Copyright className="py-5">
         <Container className="text-center">
-          <div className="d-flex align-items-end justify-content-center mb-3">
-            Un proyecto inmobiliario de <Spazios />
+          <div className="d-md-flex align-items-end justify-content-center mb-5 mb-md-3">
+            Un proyecto inmobiliario de <br className="d-md-none" />
+            <Spazios />
           </div>
           <p>Aviso de privacidad. Antal {new Date().getFullYear()}</p>
         </Container>

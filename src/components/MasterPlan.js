@@ -66,10 +66,10 @@ const MasterPlan = () => {
     <Wrapper className="pb-4">
       <StyledContainer className="pt-5 mb-5 pb-4" id="masterplan">
         <Row className="align-items-center">
-          <Col md={7}>
+          <Col md={7} className="order-1 order-md-0">
             <Img fluid={prismicInicio.data.master_plan[0].image.fluid} />
           </Col>
-          <Col md={5}>
+          <Col md={5} className="order-0 order-md-1">
             <h2 className="mb-5">
               {prismicInicio.data.master_plan[0].title.text}
             </h2>

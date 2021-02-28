@@ -12,6 +12,9 @@ const Wrapper = styled.div`
   h2 {
     color: ${(props) => props.theme.colors.gray};
   }
+  .slick-slider {
+    overflow: hidden;
+  }
   .slick-list {
     margin: 0 -30px;
   }

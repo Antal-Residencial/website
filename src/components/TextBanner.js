@@ -42,7 +42,7 @@ const TextBanner = () => {
         </Col>
         <RightCol
           md={6}
-          className="d-flex align-items-center justify-content-center"
+          className="d-flex align-items-center justify-content-center px-5 px-md-0 py-4 py-md-0"
         >
           <div>
             <div className="d-inline">

@@ -24,7 +24,7 @@ const Social = styled.div`
 const SocialItems = ({ className, ...props }) => {
   return (
     <Social
-      className={`${className} d-flex align-items-center justify-content-center social`}
+      className={`${className} d-flex align-items-center justify-content-md-center social`}
       {...props}
     >
       <a

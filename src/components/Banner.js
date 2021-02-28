@@ -8,6 +8,7 @@ import Button from "./Button";
 
 const LeftCol = styled(Col)`
   background-color: ${(props) => props.theme.colors.green};
+  overflow: hidden;
   p {
     color: #fff;
     opacity: 0.7;
