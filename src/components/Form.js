@@ -11,13 +11,15 @@ const Wrapper = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 60%;
+  width: 55%;
   background-color: ${(props) =>
     props.submitted ? props.theme.colors.sand : props.theme.colors.green};
   transform: translateX(-100%);
   transition: all 0.3s ease-in-out;
   color: ${(props) => (props.submitted ? "#000" : "rgba(255, 255, 255, 0.7)")};
   z-index: 1500;
+  max-height: 100vh;
+  overflow-y: scroll;
   &.opened {
     transform: translateX(0);
   }
@@ -134,6 +136,7 @@ const Form = ({ opened, setOpenedForm }) => {
               onChange={(e) => {
                 setName(e.target.value);
               }}
+              required
             />
             <input
               placeholder="Correo"
@@ -144,6 +147,7 @@ const Form = ({ opened, setOpenedForm }) => {
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
+              required
             />
             <input
               placeholder="Celular"
@@ -153,6 +157,7 @@ const Form = ({ opened, setOpenedForm }) => {
               onChange={(e) => {
                 setPhone(e.target.value);
               }}
+              required
             />
             <Button
               type="submit"
