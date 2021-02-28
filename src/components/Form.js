@@ -107,6 +107,7 @@ const Form = ({ opened, setOpenedForm }) => {
   return (
     <Wrapper className={opened ? "opened" : ""} submitted={submitted}>
       <Img
+        className="d-none d-md-block"
         fluid={
           submitted
             ? prismicInicio.data.form[0].success_image.fluid
