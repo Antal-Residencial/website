@@ -18,6 +18,12 @@ const LeftCol = styled(Col)`
 
 const ImgWrapper = styled.div`
   position: relative;
+  @media (min-width: 768px) {
+    height: 100%;
+  }
+  @media (min-width: 992px) {
+    height: auto;
+  }
   &:after {
     content: "";
     display: block;

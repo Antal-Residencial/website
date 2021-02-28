@@ -48,7 +48,7 @@ const Footer = ({ setOpenedForm }) => {
           <Logo />
         </div>
         <Row className="pb-5">
-          <Col className="mb-5 mb-md-0">
+          <Col className="mb-5 mb-lg-0">
             <h4 className="mb-4">Más información</h4>
             <Button
               onClick={() => {
@@ -58,7 +58,7 @@ const Footer = ({ setOpenedForm }) => {
               Descargar brochure
             </Button>
           </Col>
-          <Col md={5} className="text-md-center mb-5 mb-md-0">
+          <Col md={5} className="text-md-center mb-5 mb-lg-0">
             <h4 className="mb-4">Síguenos</h4>
             <SocialItems />
           </Col>

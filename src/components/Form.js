@@ -11,15 +11,23 @@ const Wrapper = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 55%;
+  width: 100%;
   background-color: ${(props) =>
     props.submitted ? props.theme.colors.sand : props.theme.colors.green};
   transform: translateX(-100%);
   transition: all 0.3s ease-in-out;
   color: ${(props) => (props.submitted ? "#000" : "rgba(255, 255, 255, 0.7)")};
   z-index: 1500;
-  max-height: 100vh;
+  height: 100vh;
   overflow-y: scroll;
+  @media (min-width: 768px) {
+    width: 75%;
+    height: auto;
+    max-height: 100vh;
+  }
+  @media (min-width: 992px) {
+    width: 55%;
+  }
   &.opened {
     transform: translateX(0);
   }

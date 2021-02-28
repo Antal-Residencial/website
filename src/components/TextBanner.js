@@ -11,6 +11,9 @@ const RightCol = styled(Col)`
     color: #fff;
     opacity: 0.7;
     font-size: 1.5rem;
+    @media (min-width: 768px) and (max-width: 991px) {
+      font-size: 1.2rem;
+    }
   }
 `;
 

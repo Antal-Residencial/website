@@ -63,6 +63,7 @@ const MenuWrapper = styled.div`
   z-index: 1999;
   transform: translateX(-100%);
   transition: all 0.3s ease-in-out;
+  overflow-y: scroll;
   &.opened {
     transform: translateX(0);
   }
@@ -79,10 +80,13 @@ const MenuWrapper = styled.div`
       }
     }
     button {
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: 400;
       letter-spacing: 0.1em;
       transition: all 0.3s ease-in-out;
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
       &:hover {
         opacity: 0.4;
       }
@@ -130,10 +134,10 @@ const Header = ({ setOpenedForm }) => {
         <StyledHeader className="py-4">
           <Container>
             <Row className="align-items-center">
-              <Col xs={6} md={2}>
+              <Col xs={6} lg={2}>
                 <Logo />
               </Col>
-              <Col md={8} className="d-none d-md-block">
+              <Col lg={8} className="d-none d-lg-block">
                 <div className="d-flex justify-content-around px-4">
                   <button
                     onClick={() => {
@@ -145,7 +149,7 @@ const Header = ({ setOpenedForm }) => {
                   <a href="tel:+524424541630">TEL 442 454 1630</a>
                 </div>
               </Col>
-              <Col xs={6} md={2} className="text-right">
+              <Col xs={6} lg={2} className="text-right">
                 <Hamburger
                   className="m-0"
                   onClick={() => {
@@ -174,7 +178,7 @@ const Header = ({ setOpenedForm }) => {
               <Close />
             </button>
           </div>
-          <ul className="list-unstyled m-0 p-0 text-center my-auto">
+          <ul className="list-unstyled m-0 p-0 text-center my-auto py-5 py-md-0">
             {menuItems.map((item) => (
               <li key={item.section}>
                 <button
@@ -189,7 +193,7 @@ const Header = ({ setOpenedForm }) => {
               </li>
             ))}
           </ul>
-          <SocialItems className="pb-5" />
+          <SocialItems className="pb-5 justify-content-center" />
         </Container>
       </MenuWrapper>
     </>

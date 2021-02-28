@@ -8,12 +8,15 @@ import { RichText } from "prismic-reactjs";
 import Button from "./Button";
 
 const StyledContainer = styled(Container)`
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     margin-top: -50px;
   }
   h2 {
     color: ${(props) => props.theme.colors.gray};
     letter-spacing: 0.1em;
+    @media (min-width: 768px) and (max-width: 991px) {
+      font-size: 1.2rem;
+    }
   }
   ul {
     padding: 0;
@@ -63,7 +66,11 @@ const Houses = ({ setOpenedForm }) => {
     }
   `);
   return (
-    <StyledContainer fluid className="px-0 pt-5 pt-md-0" id="distribucion">
+    <StyledContainer
+      fluid
+      className="px-0 pt-5 pt-md-0 py-md-5 py-lg-0"
+      id="distribucion"
+    >
       {prismicInicio.data.houses.map((house) => (
         <Row
           key={house.title.text}
