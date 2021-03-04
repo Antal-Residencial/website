@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import HeroImage from "../components/HeroImage";
 import Concept from "../components/Concept";
 import Gallery from "../components/Gallery";
+import VirtualTour from "../components/VirtualTour";
 import MasterPlan from "../components/MasterPlan";
 import Banner from "../components/Banner";
 import FullWidthImage from "../components/FullWidthImage";
@@ -26,7 +27,7 @@ const IndexPage = () => {
       <HeroImage setOpenedForm={setOpenedForm} />
       <Concept />
       <Gallery />
-      {/* TODO: Add virtual tour */}
+      <VirtualTour />
       <MasterPlan />
       <Banner setOpenedForm={setOpenedForm} />
       <FullWidthImage />

@@ -171,43 +171,6 @@
         "label": "Full width image"
       }
     },
-    "houses": {
-      "type": "Group",
-      "config": {
-        "fields": {
-          "image": {
-            "type": "Image",
-            "config": {
-              "constraint": {},
-              "thumbnails": [],
-              "label": "Image"
-            }
-          },
-          "title": {
-            "type": "StructuredText",
-            "config": {
-              "single": "heading1",
-              "label": "Title"
-            }
-          },
-          "content": {
-            "type": "StructuredText",
-            "config": {
-              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
-              "label": "Content"
-            }
-          },
-          "show_button": {
-            "type": "Boolean",
-            "config": {
-              "default_value": false,
-              "label": "Show button"
-            }
-          }
-        },
-        "label": "Houses"
-      }
-    },
     "text_banner": {
       "type": "Group",
       "config": {
@@ -286,6 +249,57 @@
         },
         "label": "Form",
         "repeat": false
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "houses": []
+        },
+        "choices": {
+          "houses": {
+            "type": "Slice",
+            "fieldset": "Houses",
+            "description": "House block",
+            "icon": "business",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1",
+                  "label": "Title"
+                }
+              },
+              "content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "Content"
+                }
+              },
+              "show_button": {
+                "type": "Boolean",
+                "config": {
+                  "default_value": false,
+                  "label": "Show button"
+                }
+              }
+            },
+            "repeat": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Image"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

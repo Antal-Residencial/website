@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import { RichText } from "prismic-reactjs";
+import Slider from "react-slick";
 
 import Button from "./Button";
 
@@ -53,38 +54,63 @@ const Houses = ({ setOpenedForm }) => {
     {
       prismicInicio {
         data {
-          houses {
-            title {
-              text
-            }
-            image {
-              fluid {
-                ...GatsbyPrismicImageFluid
+          body {
+            ... on PrismicInicioBodyHouses {
+              id
+              items {
+                image {
+                  alt
+                  url
+                  fluid {
+                    ...GatsbyPrismicImageFluid
+                  }
+                }
+              }
+              primary {
+                title {
+                  text
+                }
+                show_button
+                content {
+                  raw
+                }
               }
             }
-            content {
-              raw
-            }
-            show_button
           }
         }
       }
     }
   `);
+
+  const settings = {
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    adaptiveHeight: true,
+  };
+
   return (
     <StyledContainer
       fluid
       className="px-0 pt-5 pt-md-0 py-md-5 py-lg-0"
       id="distribucion"
     >
-      {prismicInicio.data.houses.map((house) => (
+      {prismicInicio.data.body.map((slice) => (
         <Row
-          key={house.title.text}
+          key={slice.id}
           noGutters
           className="mb-5 mb-md-4 align-items-center"
         >
           <Col md={6} className="mb-4 mb-md-0">
-            <Img fluid={house.image.fluid} />
+            <Slider {...settings}>
+              {slice.items.map((item) => (
+                <Img
+                  key={item.image.url}
+                  fluid={item.image.fluid}
+                  alt={item.image.alt || ""}
+                />
+              ))}
+            </Slider>
           </Col>
           <Col md={6} className="overflow-hidden">
             <Row>
@@ -94,10 +120,10 @@ const Houses = ({ setOpenedForm }) => {
                 className="px-5 px-md-0 mx-auto text-center text-md-left"
               >
                 <h2 className="mb-4 text-center text-md-left">
-                  {house.title.text}
+                  {slice.primary.title.text}
                 </h2>
-                <RichText render={house.content.raw} />
-                {house.show_button && (
+                <RichText render={slice.primary.content.raw} />
+                {slice.primary.show_button && (
                   <Button
                     onClick={() => {
                       setOpenedForm(true);
