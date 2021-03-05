@@ -35,6 +35,7 @@ const StyledExternal = styled.a`
   border: ${(props) => (props.outlined ? "solid 1px #fff" : "none")};
   font-size: 0.8rem;
   transition: all 0.3s ease-in-out;
+  display: inline-block;
   &:hover {
     background-color: ${(props) =>
       props.outlined ? "#fff" : props.theme.colors.blueAlt};
@@ -62,6 +63,8 @@ const Button = ({
       <StyledExternal
         className={`${className} rounded-pill`}
         outlined={outlined}
+        target="_blank"
+        rel="noreferrer"
         {...props}
       >
         <span>{children}</span>

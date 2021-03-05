@@ -44,15 +44,21 @@ const SocialItems = ({ className, ...props }) => {
       <a
         href="https://www.youtube.com/channel/UCdTwFhtZPYKrrCwXu43qumA"
         target="_blank"
+        rel="noreferrer"
       >
         <Youtube />
       </a>
-      <a href="https://vm.tiktok.com/ZMe6GcQoR/" target="_blank">
+      <a
+        href="https://vm.tiktok.com/ZMe6GcQoR/"
+        target="_blank"
+        rel="noreferrer"
+      >
         <Tiktok />
       </a>
       <a
         href="https://www.linkedin.com/company/antal-residencial/about/"
         target="_blank"
+        rel="noreferrer"
       >
         <Linkedin />
       </a>

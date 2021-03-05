@@ -17,6 +17,7 @@ const VirtualTour = () => {
             <iframe
               src="/recorrido/index.html"
               className="embed-responsive-item"
+              title="virtual tour"
               allowFullScreen
             />
           </div>

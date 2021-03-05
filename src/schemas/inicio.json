@@ -245,6 +245,13 @@
               "thumbnails": [],
               "label": "Success image"
             }
+          },
+          "brochure": {
+            "type": "Link",
+            "config": {
+              "select": "media",
+              "label": "Brochure"
+            }
           }
         },
         "label": "Form",

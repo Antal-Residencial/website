@@ -99,6 +99,9 @@ const Form = ({ opened, setOpenedForm }) => {
                 ...GatsbyPrismicImageFluid
               }
             }
+            brochure {
+              url
+            }
           }
         }
       }
@@ -114,18 +117,22 @@ const Form = ({ opened, setOpenedForm }) => {
       FNAME: name,
       PHONE: phone,
     });
+    console.log(result, msg);
 
-    if (result === "success") {
+    if (result === "success" || msg.includes("is already subscribed")) {
       setSubmitted(true);
-      window.gtag("event", "page_view", {
-        page_title: "Gracias",
-        page_location: "/gracias",
-        page_path: "/gracias",
-        send_to: "UA-168115956-9",
-      });
+      if (window.gtag) {
+        window.gtag("event", "page_view", {
+          page_title: "Gracias",
+          page_location: "/gracias",
+          page_path: "/gracias",
+          send_to: "UA-168115956-9",
+        });
+      }
+    } else {
+      setFormMsg(msg);
     }
     setSubmitting(false);
-    setFormMsg(msg);
   };
 
   return (
@@ -208,10 +215,11 @@ const Form = ({ opened, setOpenedForm }) => {
           </form>
         )}
         {submitted && (
-          <Button href="" external>
+          <Button href={prismicInicio.data.form[0].brochure.url} external>
             Descargar
           </Button>
         )}
+        {formMsg && <p>{formMsg}</p>}
       </div>
     </Wrapper>
   );
