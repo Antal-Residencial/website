@@ -12,7 +12,8 @@ const Wrapper = styled.div`
   position: relative;
   & > div {
     z-index: 2;
-    p {
+    p,
+    div {
       font-size: 1.5rem;
       letter-spacing: 0.1em;
       line-height: 1;
@@ -56,7 +57,7 @@ const HeroImage = ({ setOpenedForm }) => {
       />
       <Container className="text-white text-center">
         <p className="text-center">Una experiencia de</p>
-        <p className="text-center">
+        <div className="text-center">
           vida{" "}
           <TextLoop>
             <span>consciente</span>
@@ -64,7 +65,7 @@ const HeroImage = ({ setOpenedForm }) => {
             <span>en comunidad</span>
           </TextLoop>
           .
-        </p>
+        </div>
         <Button
           className="mt-4"
           onClick={() => {

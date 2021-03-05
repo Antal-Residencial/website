@@ -117,6 +117,12 @@ const Form = ({ opened, setOpenedForm }) => {
 
     if (result === "success") {
       setSubmitted(true);
+      window.gtag("event", "page_view", {
+        page_title: "Gracias",
+        page_location: "/gracias",
+        page_path: "/gracias",
+        send_to: "UA-168115956-9",
+      });
     }
     setSubmitting(false);
     setFormMsg(msg);
