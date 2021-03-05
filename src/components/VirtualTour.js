@@ -9,7 +9,7 @@ const Title = styled.h2`
 
 const VirtualTour = () => {
   return (
-    <Container fluid className="py-5">
+    <Container id="recorrido-virtual" fluid className="py-5">
       <Title className="text-center mb-4">Recorrido Virtual</Title>
       <Row>
         <Col lg={10} className="mx-auto">

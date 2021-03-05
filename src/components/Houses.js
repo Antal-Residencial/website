@@ -15,6 +15,7 @@ const StyledContainer = styled(Container)`
   h2 {
     color: ${(props) => props.theme.colors.gray};
     letter-spacing: 0.1em;
+    line-height: 1.8;
     @media (min-width: 768px) and (max-width: 991px) {
       font-size: 1.2rem;
     }
@@ -24,6 +25,7 @@ const StyledContainer = styled(Container)`
     margin: 0;
     list-style: none;
     text-align: center;
+    line-height: 2.5;
     @media (min-width: 768px) {
       text-align: left;
     }
@@ -119,7 +121,7 @@ const Houses = ({ setOpenedForm }) => {
                 lg={6}
                 className="px-5 px-md-0 mx-auto text-center text-md-left"
               >
-                <h2 className="mb-4 text-center text-md-left">
+                <h2 className="mb-5 text-center text-md-left">
                   {slice.primary.title.text}
                 </h2>
                 <RichText render={slice.primary.content.raw} />

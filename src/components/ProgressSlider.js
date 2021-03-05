@@ -91,31 +91,33 @@ const ProgressSlider = () => {
   };
 
   return (
-    <Wrapper className="pt-5 mt-4 pb-3" id="avance-obra">
-      <Container>
-        <h2 className="text-center mb-5">Avance de obra</h2>
-        <Slider {...settings}>
-          {prismicInicio.data.progress_slider.map((slide) => (
-            <div key={slide.image.url}>
-              <SlideImg className="mb-3">
-                <Img
-                  fluid={slide.image.fluid}
-                  style={{
-                    position: "absolute",
-                    width: "100%",
-                    height: "100%",
-                    top: 0,
-                    left: 0,
-                    objectFit: "cover",
-                  }}
-                />
-              </SlideImg>
-              <p>{slide.title.text}</p>
-            </div>
-          ))}
-        </Slider>
-      </Container>
-    </Wrapper>
+    prismicInicio.data.progress_slider.length > 0 && (
+      <Wrapper className="pt-5 mt-4 pb-3" id="avance-obra">
+        <Container>
+          <h2 className="text-center mb-5">Avance de obra</h2>
+          <Slider {...settings}>
+            {prismicInicio.data.progress_slider.map((slide) => (
+              <div key={slide.image.url}>
+                <SlideImg className="mb-3">
+                  <Img
+                    fluid={slide.image.fluid}
+                    style={{
+                      position: "absolute",
+                      width: "100%",
+                      height: "100%",
+                      top: 0,
+                      left: 0,
+                      objectFit: "cover",
+                    }}
+                  />
+                </SlideImg>
+                <p>{slide.title.text}</p>
+              </div>
+            ))}
+          </Slider>
+        </Container>
+      </Wrapper>
+    )
   );
 };
 
