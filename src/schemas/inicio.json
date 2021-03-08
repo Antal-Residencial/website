@@ -18,6 +18,14 @@
               "thumbnails": [],
               "label": "Image"
             }
+          },
+          "mobile_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Mobile image"
+            }
           }
         },
         "label": "Hero Image",

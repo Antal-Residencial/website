@@ -13,6 +13,9 @@ const GlobalStyle = createGlobalStyle`
   body, html {
     font-family: 'Work Sans', sans-serif;
   }
+  a, button {
+    cursor: pointer;
+  }
   a {
     &:hover {
       text-decoration: none;

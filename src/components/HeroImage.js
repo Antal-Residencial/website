@@ -8,8 +8,14 @@ import TextLoop from "react-text-loop";
 import Button from "./Button";
 
 const Wrapper = styled.div`
-  min-height: 100vh;
   position: relative;
+  .container {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
   & > div {
     z-index: 2;
     p,
@@ -31,6 +37,13 @@ const HeroImage = ({ setOpenedForm }) => {
         data {
           hero_image {
             image {
+              alt
+              fluid {
+                ...GatsbyPrismicImageFluid
+              }
+            }
+            mobile_image {
+              alt
               fluid {
                 ...GatsbyPrismicImageFluid
               }
@@ -42,20 +55,18 @@ const HeroImage = ({ setOpenedForm }) => {
   `);
 
   return (
-    <Wrapper className="d-flex align-items-center">
+    <Wrapper>
       <Img
         fluid={prismicInicio.data.hero_image[0].image.fluid}
-        alt=""
-        style={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          top: 0,
-          left: 0,
-          objectFit: "cover",
-        }}
+        alt={prismicInicio.data.hero_image[0].image.alt || ""}
+        className="d-none d-md-block"
       />
-      <Container className="text-white text-center">
+      <Img
+        fluid={prismicInicio.data.hero_image[0].mobile_image.fluid}
+        alt={prismicInicio.data.hero_image[0].mobile_image.alt || ""}
+        className="d-md-none"
+      />
+      <Container className="text-white text-center position-absolute d-flex align-items-center justify-content-center flex-column">
         <p className="text-center">Una experiencia de</p>
         <div className="text-center">
           vida{" "}
