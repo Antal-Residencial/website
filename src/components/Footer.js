@@ -94,7 +94,11 @@ const Footer = ({ setOpenedForm }) => {
           <Container className="text-center">
             <div className="d-md-flex align-items-end justify-content-center mb-5 mb-md-3">
               Un proyecto inmobiliario de <br className="d-md-none" />
-              <a href="https://www.szs.com.mx" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.facebook.com/spaziosmx"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Spazios />
               </a>
             </div>
