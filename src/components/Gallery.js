@@ -18,6 +18,7 @@ const StyledArrow = styled.button`
   top: 0;
   bottom: 0;
   margin: auto;
+  z-index: 2;
   @media (min-width: 768px) {
     width: 80px;
     height: 80px;
@@ -36,7 +37,13 @@ const CustomArrow = (props) => {
   );
 };
 
-const PrevArrow = () => null;
+const PrevArrow = (props) => {
+  return (
+    <StyledArrow {...props} style={{ right: "auto", left: 0 }}>
+      <Arrow style={{ transform: "rotate(180deg)" }} />
+    </StyledArrow>
+  );
+};
 
 const StyledContainer = styled(Container)`
   .slick-list {
@@ -83,7 +90,7 @@ const Gallery = () => {
     slidesToShow: 3,
     prevArrow: <PrevArrow />,
     nextArrow: <CustomArrow />,
-    infinite: prismicInicio.data.gallery.length > 3 ? true : false,
+    infinite: false,
     responsive: [
       {
         breakpoint: 768,
