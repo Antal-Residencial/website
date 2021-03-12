@@ -48,7 +48,7 @@ const PrevArrow = (props) => {
 const StyledContainer = styled(Container)`
   .slick-list {
     margin: 0 -10px;
-    margin-right: 15%;
+    //margin-right: 15%;
     overflow: visible;
   }
   .slick-slide {
