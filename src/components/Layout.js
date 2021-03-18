@@ -1,13 +1,10 @@
 import React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "@fontsource/work-sans/400.css";
 import "@fontsource/work-sans/500.css";
 import "@fontsource/work-sans/700.css";
-
-import WhatsappIcon from "../images/whatsapp.inline.svg";
 
 const GlobalStyle = createGlobalStyle`
   body, html {
@@ -73,34 +70,13 @@ const theme = {
   },
 };
 
-const Whatsapp = styled.a`
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  z-index: 1999;
-  svg {
-    width: 50px;
-    height: auto;
-    @media (min-width: 768px) {
-      width: 60px;
-    }
-  }
-`;
-
 const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         {children}
-        <Whatsapp
-          href={`https://api.whatsapp.com/send?phone=+524424541630&text=${encodeURI(
-            "Quiero conocer más de Antal"
-          )}`}
-          target="_blank"
-        >
-          <WhatsappIcon />
-        </Whatsapp>
+        <div className="elfsight-app-1771bc55-4c47-481a-91e3-41fe7849c553"></div>
       </ThemeProvider>
     </>
   );
