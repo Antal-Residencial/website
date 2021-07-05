@@ -34,7 +34,7 @@ const IndexPage = () => {
       <Houses setOpenedForm={setOpenedForm} />
       <TextBanner />
       <MapSection />
-      <ProgressSlider />
+      {/* <ProgressSlider /> */}
       <Footer setOpenedForm={setOpenedForm} />
       <Form opened={openedForm} setOpenedForm={setOpenedForm} />
     </Layout>

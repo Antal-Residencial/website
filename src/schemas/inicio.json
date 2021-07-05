@@ -229,6 +229,12 @@
               "single": "heading1",
               "label": "Title"
             }
+          },
+          "video": {
+            "type": "Embed",
+            "config": {
+              "label": "Video"
+            }
           }
         },
         "label": "Progress slider"
