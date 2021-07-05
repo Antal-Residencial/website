@@ -60,7 +60,7 @@ const MenuWrapper = styled.div`
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 1999;
+  z-index: 1000;
   transform: translateX(-100%);
   transition: all 0.3s ease-in-out;
   overflow-y: scroll;

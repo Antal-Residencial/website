@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1200 !important;
+    z-index: 1000 !important;
     position: fixed !important;
     background: transparent;
   } 
