@@ -122,10 +122,10 @@ const Header = ({ setOpenedForm }) => {
       name: "Ubicación",
       section: "ubicacion",
     },
-    // {
-    //   name: "Avance de obra",
-    //   section: "avance-obra",
-    // },
+    {
+      name: "Avance de obra",
+      section: "avance-obra",
+    },
   ];
 
   return (
