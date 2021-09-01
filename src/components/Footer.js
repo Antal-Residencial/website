@@ -82,7 +82,7 @@ const Footer = ({ setOpenedForm }) => {
             </Col>
             <Col>
               <h4 className="mb-4">Ponte en contacto</h4>
-              <a href="tel:+524424541630">T. 442 454 1630</a> <br />
+              <a href="tel:+527715562860">T. 771 556 2860</a> <br />
               <a href="mailto:info@antalresidencial.com">
                 C. info@antalresidencial.com
               </a>

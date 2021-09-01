@@ -146,7 +146,7 @@ const Header = ({ setOpenedForm }) => {
                   >
                     Brochure
                   </button>
-                  <a href="tel:+524424541630">TEL 442 454 1630</a>
+                  <a href="tel:+527715562860">TEL 771 556 2860</a>
                 </div>
               </Col>
               <Col xs={6} lg={2} className="text-right">
