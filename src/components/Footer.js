@@ -5,7 +5,7 @@ import { Container, Row, Col, Modal } from "react-bootstrap";
 import Button from "./Button";
 import SocialItems from "./SocialItems";
 import Logo from "../images/logo.inline.svg";
-import Spazios from "../images/spazios.inline.svg";
+import SIOS from "../images/spazios.inline.svg";
 import Close from "../images/close.inline.svg";
 
 const Wrapper = styled.footer`
@@ -83,8 +83,8 @@ const Footer = ({ setOpenedForm }) => {
             <Col>
               <h4 className="mb-4">Ponte en contacto</h4>
               <a href="tel:+527711592453">T. 771 159 2453</a> <br />
-              <a href="mailto:info@antalresidencial.com">
-                C. info@antalresidencial.com
+              <a href="mailto:ventas@sios-inmobiliaria.com">
+                C. ventas@sios-inmobiliaria.com
               </a>
             </Col>
           </Row>
@@ -95,11 +95,11 @@ const Footer = ({ setOpenedForm }) => {
             <div className="d-md-flex align-items-end justify-content-center mb-5 mb-md-3">
               Un proyecto inmobiliario de <br className="d-md-none" />
               <a
-                href="https://www.facebook.com/spaziosmx"
+                href="https://sios-inmobiliaria.com/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <Spazios />
+                <SIOS />
               </a>
             </div>
             <p>
@@ -165,7 +165,7 @@ const Footer = ({ setOpenedForm }) => {
             Si luego de haber aceptado cambias de opinión, puedes anular tu
             consentimiento para que te contactemos, por la recolección, uso o
             divulgación de tu información, en cualquier momento, contactándonos
-            a info@antalresidencial.com
+            a ventas@sios-inmobiliaria.com
           </p>
 
           <p>SECCIÓN 3 – SERVICES DE TERCERAS PARTES </p>
@@ -211,7 +211,7 @@ const Footer = ({ setOpenedForm }) => {
             Si quieres acceder, corregir, enmendar o borrar cualquier
             información personal que poseamos sobre ti, registrar una queja, o
             simplemente quieres más información contacta a
-            info@antalresidencial.com
+            ventas@sios-inmobiliaria.com
           </p>
         </Modal.Body>
       </Modal>
