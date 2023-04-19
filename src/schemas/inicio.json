@@ -71,12 +71,7 @@
         "label": "Gallery"
       }
     },
-    "virtual_tour": {
-      "type": "Embed",
-      "config": {
-        "label": "Virtual tour"
-      }
-    },
+
     "master_plan": {
       "type": "Group",
       "config": {
@@ -211,18 +206,7 @@
         "label": "Map"
       }
     },
-    "progress_slider": {
-      "type": "Group",
-      "config": {
-        "fields": {
-          "image": {
-            "type": "Image",
-            "config": {
-              "constraint": {},
-              "thumbnails": [],
-              "label": "Image"
-            }
-          },
+
           "title": {
             "type": "StructuredText",
             "config": {
