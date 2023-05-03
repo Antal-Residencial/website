@@ -102,7 +102,7 @@ const Header = ({ setOpenedForm }) => {
       name: "Concepto",
       section: "concepto",
     },
-
+   
     {
       name: "Masterplan",
       section: "masterplan",
@@ -119,7 +119,7 @@ const Header = ({ setOpenedForm }) => {
       name: "Ubicación",
       section: "ubicacion",
     },
-
+    
   ];
 
   return (
