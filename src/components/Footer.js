@@ -82,7 +82,7 @@ const Footer = ({ setOpenedForm }) => {
             </Col>
             <Col>
               <h4 className="mb-4">Ponte en contacto</h4>
-              <a href="tel:+527711592453">T. 771 159 2453</a> <br />
+              <a href="tel:+527717122008">T. 771 712 2008</a> <br />
               <a href="mailto:ventas@sios-inmobiliaria.com">
                 C. ventas@sios-inmobiliaria.com
               </a>
